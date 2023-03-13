@@ -1,0 +1,63 @@
+// libs
+
+// base
+@import 'base/variables'
+@import 'base/normalize'
+@import 'base/svg'
+
+// layouts
+@import 'layouts/home'
+@import 'layouts/location-view'
+
+// components
+@import 'components/header/header'
+@import 'components/footer/footer'
+@import 'components/main-container/main-container'
+
+@import 'components/action-buttons/action-buttons'
+
+@import 'components/add-location-container/add-location-container'
+@import 'components/edit-location-list/edit-location-list-container'
+
+@import 'components/modal-message/modal-message'
+
+.list-cities
+    display: flex
+    flex-direction: column
+    width: 100%
+    position: absolute
+    top: 100%
+    background-color: white
+    z-index: 10
+    list-style: none
+    left: 0
+    right: 0
+    overflow-x: hidden
+    overflow-y: auto
+    max-height: 76.5vh
+    // height: 100%
+    &__item
+        padding: 0.5rem 1rem
+        cursor: pointer
+        &:is(:hover, :active, :focus)
+            background-color: $navy-light
+            color: $white
+
+.tooltip
+  position: absolute
+  display: none
+  max-width: 200px
+  min-width: 120px
+  padding: 0.5rem
+  border-radius: 5px
+  border: 1px solid #dfe6eb
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05)
+  background: #fff
+  color: #000
+  overflow: hidden
+  z-index: 3
+  top: 50px
+  left: 100px
+  font-size: 0.925rem
+  &-weather
+    font-size: 0.725rem
